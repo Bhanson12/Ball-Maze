@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2D8219CCB8700955460 /* AppDelegate.swift */; };
-		4FDEB2DB219CCB8700955460 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DA219CCB8700955460 /* art.scnassets */; };
 		4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DC219CCB8700955460 /* GameViewController.swift */; };
 		4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DE219CCB8700955460 /* Main.storyboard */; };
 		4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E1219CCB9400955460 /* Assets.xcassets */; };
 		4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */; };
 		4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */; };
+		4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2FB219CDED000955460 /* BallMaze.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		4FDEB2D5219CCB8700955460 /* Ball Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ball Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEB2D8219CCB8700955460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FDEB2DA219CCB8700955460 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		4FDEB2DC219CCB8700955460 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4FDEB2DF219CCB8700955460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FDEB2E1219CCB9400955460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ball MazeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball_MazeTests.swift; sourceTree = "<group>"; };
 		4FDEB2F1219CCB9500955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FDEB2FB219CDED000955460 /* BallMaze.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = BallMaze.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				4FDEB2D8219CCB8700955460 /* AppDelegate.swift */,
-				4FDEB2DA219CCB8700955460 /* art.scnassets */,
 				4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
 				4FDEB2DE219CCB8700955460 /* Main.storyboard */,
+				4FDEB2FB219CDED000955460 /* BallMaze.scnassets */,
 				4FDEB2E1219CCB9400955460 /* Assets.xcassets */,
 				4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */,
 				4FDEB2E6219CCB9400955460 /* Info.plist */,
@@ -180,8 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDEB2DB219CCB8700955460 /* art.scnassets in Resources */,
 				4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */,
+				4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */,
 				4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */,
 				4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */,
 			);
