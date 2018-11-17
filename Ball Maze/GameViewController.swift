@@ -8,15 +8,18 @@
 
 import UIKit
 import SceneKit
-import CoreMotion
 
 class GameViewController: UIViewController {
     
     var scnView: SCNView!
     var scnScene: SCNScene!
+    
     var cameraNode: SCNNode!
-    var ball: SCNNode!
-    var motionManager: CMMotionManager!
+    var ballNode: SCNNode!
+    
+    var motion = MotionHelper()
+    var motionForce = SCNVector3(0, 0, 0)
+    //var motionManager: CMMotionManager!
     
     
     override func viewDidLoad() {
@@ -25,8 +28,8 @@ class GameViewController: UIViewController {
         setupView()
         setupScene()
         setupCamera()
-        setupBall()
-        setupMotion()
+        setupNodes()
+        //setupMotion()
     }
     
     override var shouldAutorotate: Bool {
@@ -39,6 +42,7 @@ class GameViewController: UIViewController {
     
     func setupView() {
         scnView = self.view as! SCNView
+        scnView.delegate = self
         scnView.allowsCameraControl = true
     }
     
@@ -54,13 +58,13 @@ class GameViewController: UIViewController {
         scnScene.rootNode.addChildNode(cameraNode)
     }
     
-    func setupBall() {
-        ball = scnScene.rootNode.childNode(withName: "ball reference", recursively: true)
+    func setupNodes() {
+        ballNode = scnScene.rootNode.childNode(withName: "ball reference", recursively: true)
         //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
     }
     
     // NEED TO TEST WITH PHONE
-    func setupMotion(){
+/*    func setupMotion(){
         motionManager = CMMotionManager()
         
         if motionManager.isGyroAvailable {
@@ -71,7 +75,7 @@ class GameViewController: UIViewController {
             let x = data?.rotationRate.x
             let y = data?.rotationRate.y
             let z = data?.rotationRate.z
-            print(x!, y!, z!)
+            print(x, y, z)
             
             // Need to update ball position after checking values
         }
@@ -84,7 +88,19 @@ class GameViewController: UIViewController {
                 ball.runAction(SCNAction.moveBy(x: 0.5, y: 0, z: 0, duration: 5))
             }
         }
-    }
+    } */
+    
+    
 
 }
 
+extension GameViewController: SCNSceneRendererDelegate {
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        
+        motion.getAccelerometerData {(x, y, z) in
+            self.motionForce = SCNVector3(x: x * 0.05, y: 0, z: (y + 0.8) * -0.05)
+            print(x, y, z)
+        }
+        ballNode.physicsBody?.velocity += motionForce
+    }
+}
