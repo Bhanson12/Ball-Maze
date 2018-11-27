@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
     }
     
     func setupNodes() {
-        ballNode = scnScene.rootNode.childNode(withName: "ball reference", recursively: true)
+        ballNode = scnScene.rootNode.childNode(withName: "ball", recursively: true)!
         //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
     }
     
