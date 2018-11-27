@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     
     var cameraNode: SCNNode!
     var ballNode: SCNNode!
+    var levelNode: SCNNode!
     
     var motion = MotionHelper()
     var motionForce = SCNVector3(0, 0, 0)
@@ -29,6 +30,7 @@ class GameViewController: UIViewController {
         setupScene()
         setupCamera()
         setupNodes()
+        setupLevel()
         //setupMotion()
     }
     
@@ -61,6 +63,16 @@ class GameViewController: UIViewController {
     func setupNodes() {
         ballNode = scnScene.rootNode.childNode(withName: "ball", recursively: true)!
         //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        
+    }
+    
+    func setupLevel() {
+        let levelScene = SCNScene(named: "BallMaze.scnassets/level1.scn")
+        scnScene.rootNode.addChildNode((levelScene?.rootNode.childNode(withName: "level1", recursively: true))!)
+        
+        levelNode = scnScene.rootNode.childNode(withName: "level1", recursively: true)!
+        levelNode.position = SCNVector3(x: 0, y: 0.01, z: 0)
+        
     }
     
     // NEED TO TEST WITH PHONE
