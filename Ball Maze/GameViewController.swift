@@ -11,12 +11,15 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
+    let categoryEndLevel = 8;
+    
     var scnView: SCNView!
     var scnScene: SCNScene!
     
     var cameraNode: SCNNode!
     var ballNode: SCNNode!
     var levelNode: SCNNode!
+    var endLevelNode: SCNNode!
     
     var motion = MotionHelper()
     var motionForce = SCNVector3(0, 0, 0)
@@ -51,6 +54,8 @@ class GameViewController: UIViewController {
     func setupScene() {
         scnScene = SCNScene(named: "BallMaze.scnassets/MainScene.scn")
         scnView.scene = scnScene
+        
+        scnScene.physicsWorld.contactDelegate = self
     }
     
     func setupCamera() {
@@ -62,6 +67,7 @@ class GameViewController: UIViewController {
     
     func setupNodes() {
         ballNode = scnScene.rootNode.childNode(withName: "ball", recursively: true)!
+        ballNode.physicsBody?.contactTestBitMask = categoryEndLevel
         //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
     }
@@ -71,8 +77,10 @@ class GameViewController: UIViewController {
         scnScene.rootNode.addChildNode((levelScene?.rootNode.childNode(withName: "level1", recursively: true))!)
         
         levelNode = scnScene.rootNode.childNode(withName: "level1", recursively: true)!
-        levelNode.position = SCNVector3(x: 0, y: 0.01, z: 0)
+        //levelNode.position = SCNVector3(x: 0, y: 0.01, z: 0)
         
+        endLevelNode = scnScene.rootNode.childNode(withName: "endBox", recursively: true)!
+        //endLevelNode.position = SCNVector3(x: 0, y: 0, z: 2.5)
     }
     
     // NEED TO TEST WITH PHONE
@@ -111,8 +119,30 @@ extension GameViewController: SCNSceneRendererDelegate {
         
         motion.getAccelerometerData {(x, y, z) in
             self.motionForce = SCNVector3(x: x * 0.05, y: 0, z: (y + 0.8) * -0.05)
-            print(x, y, z)
         }
         ballNode.physicsBody?.velocity += motionForce
+    }
+}
+
+extension GameViewController: SCNPhysicsContactDelegate {
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        var contactNode: SCNNode!
+        
+        if contact.nodeA.name == "ball" {
+            contactNode = contact.nodeB
+        }else {
+            contactNode = contact.nodeA
+        }
+        
+        if contactNode.physicsBody?.categoryBitMask == categoryEndLevel {
+            print("next level")
+            
+            let actionSheet = UIAlertController(title: "Level Completed", message: "Continue to next Level", preferredStyle: .actionSheet)
+            
+            actionSheet.addAction(UIAlertAction(title: "Main Menu", style: .default, handler: nil))
+            
+            actionSheet.addAction(UIAlertAction(title: "Next Level", style: .default, handler: nil))
+            
+        }
     }
 }
