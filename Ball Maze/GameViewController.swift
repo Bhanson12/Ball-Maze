@@ -11,7 +11,7 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
-    let categoryEndLevel = 8;
+    let categoryEndLevel = 8
     
     var scnView: SCNView!
     var scnScene: SCNScene!
@@ -23,7 +23,6 @@ class GameViewController: UIViewController {
     
     var motion = MotionHelper()
     var motionForce = SCNVector3(0, 0, 0)
-    //var motionManager: CMMotionManager!
     
     
     override func viewDidLoad() {
@@ -31,7 +30,7 @@ class GameViewController: UIViewController {
         
         setupView()
         setupScene()
-        setupCamera()
+        setupCameraAndLighting()
         setupNodes()
         setupLevel()
         //setupMotion()
@@ -58,11 +57,27 @@ class GameViewController: UIViewController {
         scnScene.physicsWorld.contactDelegate = self
     }
     
-    func setupCamera() {
+    func setupCameraAndLighting() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10) //Position camera
+        
+        let lightNodeDirectional = SCNNode()
+        lightNodeDirectional.light = SCNLight()
+        lightNodeDirectional.light?.type = SCNLight.LightType.ambient
+        lightNodeDirectional.position = SCNVector3(0, 10, 5)
+        
+        let ambiLightNode = SCNNode()
+        ambiLightNode.light = SCNLight()
+        ambiLightNode.light?.type = SCNLight.LightType.ambient
+        ambiLightNode.light?.color = UIColor.gray
+        
+        let center = SCNNode()
+        lightNodeDirectional.constraints = [SCNLookAtConstraint(target: center)]
+        cameraNode.constraints = [SCNLookAtConstraint(target: center)]
+        
         scnScene.rootNode.addChildNode(cameraNode)
+        scnScene.rootNode.addChildNode(lightNodeDirectional)
+        scnScene.rootNode.addChildNode(ambiLightNode)
     }
     
     func setupNodes() {
@@ -71,16 +86,35 @@ class GameViewController: UIViewController {
         //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
     }
-    
+    /*
+    func setupBall() {
+        let ballBitMask = 1
+        
+        let ballGeom = SCNSphere(radius: 0.15)
+        let ballMat = SCNMaterial()
+        ballMat.diffuse.contents = UIImage(named: "BallMaze.scnassets/Textures/8ball.jpg")
+        ballGeom.firstMaterial = ballMat
+        ballNode = SCNNode(geometry: ballGeom)
+        ballNode.position = SCNVector3(0, 0, 0)
+        scnScene.rootNode.addChildNode(ballNode)
+        
+        ballNode.physicsBody = SCNPhysicsBody.dynamic()
+        ballNode.physicsBody?.restitution = 0.8
+        ballNode.physicsBody?.mass = 1
+        
+        ballNode.physicsBody?.categoryBitMask = ballBitMask
+        ballNode.physicsBody?.contactTestBitMask = categoryEndLevel
+        
+    }
+    */
     func setupLevel() {
         let levelScene = SCNScene(named: "BallMaze.scnassets/level1.scn")
         scnScene.rootNode.addChildNode((levelScene?.rootNode.childNode(withName: "level1", recursively: true))!)
         
         levelNode = scnScene.rootNode.childNode(withName: "level1", recursively: true)!
-        //levelNode.position = SCNVector3(x: 0, y: 0.01, z: 0)
+        levelNode.position = SCNVector3(0, 0, 0)
         
         endLevelNode = scnScene.rootNode.childNode(withName: "endBox", recursively: true)!
-        //endLevelNode.position = SCNVector3(x: 0, y: 0, z: 2.5)
     }
     
     // NEED TO TEST WITH PHONE
@@ -135,14 +169,14 @@ extension GameViewController: SCNPhysicsContactDelegate {
         }
         
         if contactNode.physicsBody?.categoryBitMask == categoryEndLevel {
-            print("next level")
             
-            let actionSheet = UIAlertController(title: "Level Completed", message: "Continue to next Level", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: "Level Completed", message: "Continue to next Level", preferredStyle: .alert)
             
-            actionSheet.addAction(UIAlertAction(title: "Main Menu", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Main Menu", style: .default, handler: nil))
             
-            actionSheet.addAction(UIAlertAction(title: "Next Level", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Next Level", style: .default, handler: nil))
             
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
