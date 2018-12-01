@@ -32,6 +32,7 @@ class GameViewController: UIViewController {
         setupScene()
         setupCameraAndLighting()
         setupNodes()
+        //setupBall()
         setupLevel()
         //setupMotion()
     }
