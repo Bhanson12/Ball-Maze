@@ -32,9 +32,7 @@ class GameViewController: UIViewController {
         setupScene()
         setupCameraAndLighting()
         setupNodes()
-        //setupBall()
         setupLevel()
-        //setupMotion()
     }
     
     override var shouldAutorotate: Bool {
@@ -84,30 +82,9 @@ class GameViewController: UIViewController {
     func setupNodes() {
         ballNode = scnScene.rootNode.childNode(withName: "ball", recursively: true)!
         ballNode.physicsBody?.contactTestBitMask = categoryEndLevel
-        //ball!.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
     }
-    /*
-    func setupBall() {
-        let ballBitMask = 1
-        
-        let ballGeom = SCNSphere(radius: 0.15)
-        let ballMat = SCNMaterial()
-        ballMat.diffuse.contents = UIImage(named: "BallMaze.scnassets/Textures/8ball.jpg")
-        ballGeom.firstMaterial = ballMat
-        ballNode = SCNNode(geometry: ballGeom)
-        ballNode.position = SCNVector3(0, 0, 0)
-        scnScene.rootNode.addChildNode(ballNode)
-        
-        ballNode.physicsBody = SCNPhysicsBody.dynamic()
-        ballNode.physicsBody?.restitution = 0.8
-        ballNode.physicsBody?.mass = 1
-        
-        ballNode.physicsBody?.categoryBitMask = ballBitMask
-        ballNode.physicsBody?.contactTestBitMask = categoryEndLevel
-        
-    }
-    */
+
     func setupLevel() {
         let levelScene = SCNScene(named: "BallMaze.scnassets/level1.scn")
         scnScene.rootNode.addChildNode((levelScene?.rootNode.childNode(withName: "level1", recursively: true))!)
@@ -118,34 +95,11 @@ class GameViewController: UIViewController {
         endLevelNode = scnScene.rootNode.childNode(withName: "endBox", recursively: true)!
     }
     
-    // NEED TO TEST WITH PHONE
-/*    func setupMotion(){
-        motionManager = CMMotionManager()
+    func setupUI() {
+        let mainMenuButton = UIButton()
         
-        if motionManager.isGyroAvailable {
-            motionManager.gyroUpdateInterval = 1.0 / 60.0
-            motionManager.startGyroUpdates()
-            
-            let data = motionManager.gyroData
-            let x = data?.rotationRate.x
-            let y = data?.rotationRate.y
-            let z = data?.rotationRate.z
-            print(x, y, z)
-            
-            // Need to update ball position after checking values
-        }
-            
-            // Just testing moving the ball
-        else{
-            if(ball.position.x >= 0){
-                ball.runAction(SCNAction.moveBy(x: -0.5, y: 0, z: 0, duration: 5))
-            } else {
-                ball.runAction(SCNAction.moveBy(x: 0.5, y: 0, z: 0, duration: 5))
-            }
-        }
-    } */
-    
-    
+        
+    }
 
 }
 
