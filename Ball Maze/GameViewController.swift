@@ -11,6 +11,7 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
+
     let categoryEndLevel = 8
     
     var scnView: SCNView!
@@ -24,24 +25,24 @@ class GameViewController: UIViewController {
     var motion = MotionHelper()
     var motionForce = SCNVector3(0, 0, 0)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController!.navigationBar.isTranslucent = true
         
-        setupView()
-        setupScene()
-        setupCameraAndLighting()
-        setupNodes()
-        setupLevel()
+        setupWorld()
     }
     
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    
+    // MARK: Private Methods
     
     func setupView() {
         scnView = self.view as! SCNView
@@ -95,12 +96,56 @@ class GameViewController: UIViewController {
         endLevelNode = scnScene.rootNode.childNode(withName: "endBox", recursively: true)!
     }
     
+    func setupWorld(){
+        setupView()
+        setupScene()
+        setupCameraAndLighting()
+        setupNodes()
+        setupLevel()
+    }
+    
     func setupUI() {
         let mainMenuButton = UIButton()
         
         
     }
-
+    
+    // MARK: Navigation
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        /*
+        // Configure the destination view controller only when the pause button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === pauseButton else {
+            return
+        }*/
+        
+        scnScene.isPaused = true
+    }
+    
+    @IBAction func unwindToGame(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? PauseViewController{
+            let option = sourceViewController.option
+            print(option)
+            
+            switch option {
+            case 0:
+                scnScene.isPaused = false
+            case 1:
+                setupWorld()
+                scnScene.isPaused = false
+            case 2:
+                self.navigationController?.popToRootViewController(animated: false)
+            default:
+                scnScene.isPaused = false
+            }
+        }
+    }
+    
+  
+    
 }
 
 extension GameViewController: SCNSceneRendererDelegate {
@@ -134,4 +179,8 @@ extension GameViewController: SCNPhysicsContactDelegate {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+    
 }
+
+
