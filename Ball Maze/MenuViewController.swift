@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import AVKit
+import os.log
 
 var music:AVAudioPlayer?
 
@@ -16,6 +17,9 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var StartBut: UIButton!
     @IBOutlet weak var LBBut: UIButton!
+    @IBOutlet weak var userText: UILabel!
+    
+    var settings: Settings?
     
     var GameView: GameViewController!
     var PauseMenu: PauseViewController!
@@ -23,7 +27,32 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MusicController.sharedMusic.play()
+        
+        if let savedSettings = loadSettings() {
+            settings = savedSettings
+            os_log("Loading saved settings", log: OSLog.default, type: .debug)
+        }  else {
+            loadDefaultSettings()
+            os_log("Loading default settings", log: OSLog.default, type: .debug)
+        }
+        
+        if(settings!.musicOn) {
+            MusicController.sharedMusic.enable()
+        } else {
+            MusicController.sharedMusic.disable()
+        }
+        if(settings!.sfxOn){
+            SFXController.sharedSFX.enable()
+        } else {
+            SFXController.sharedSFX.disable()
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        userText.text = "Current User: " + (settings?.user)!
     }
     
     @IBAction func StartButton(_ sender: Any) {
@@ -47,6 +76,18 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
  
+    }
+    
+    private func loadDefaultSettings() {
+        
+        guard let defaultSettings = Settings(user: "default", sfxOn: false, musicOn: false) else {
+            fatalError("Unable to instantiate default settings")
+        }
+        settings = defaultSettings
+    }
+    
+    private func loadSettings() -> Settings? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
     }
 }
 

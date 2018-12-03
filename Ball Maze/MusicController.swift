@@ -14,6 +14,8 @@ class MusicController {
     static let sharedMusic = MusicController()
     var music: AVAudioPlayer?
     
+    var enabled = true
+    
     func play() {
         let path = Bundle.main.path(forResource: "Music/music.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
@@ -34,6 +36,21 @@ class MusicController {
     
     func isPlaying() -> Bool? {
         return music?.isPlaying
+    }
+    
+    
+    func isEnabled() -> Bool? {
+        return enabled
+    }
+    
+    func disable() {
+        enabled = false
+        stop()
+    }
+    
+    func enable() {
+        enabled = true
+        play()
     }
 }
 

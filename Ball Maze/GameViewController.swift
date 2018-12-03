@@ -207,9 +207,6 @@ class GameViewController: UIViewController {
             }
         }
     }
-    
-  
-    
 }
 
 extension GameViewController: SCNSceneRendererDelegate {
@@ -218,6 +215,10 @@ extension GameViewController: SCNSceneRendererDelegate {
         motion.getAccelerometerData {(x, y, z) in
             self.motionForce = SCNVector3(x: x * 0.05, y: 0, z: (y + 0.8) * -0.05)
         }
+        
+        // for pc level completion
+        self.motionForce = SCNVector3(x: 0, y: 0, z: -0.08)
+        
         ballNode.physicsBody?.velocity += motionForce
     }
 }

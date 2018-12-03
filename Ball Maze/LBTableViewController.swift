@@ -19,6 +19,7 @@ class LBTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Main Menu", style: .plain, target: self, action: #selector(backButtonPressed))
         
         if let savedScores = loadScores() {
+            //scores.append(savedScores)
             scores += savedScores
         }
         else {
@@ -52,7 +53,8 @@ class LBTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of ScoreTableViewCell.")
         }
         
-        let score = scores[indexPath.row]
+        let sortedScores = scores.sorted(by: { $0.score > $1.score })
+        let score = sortedScores[indexPath.row]
         
         cell.userLabel.text = score.user
         cell.scoreLabel.text = String(score.score)

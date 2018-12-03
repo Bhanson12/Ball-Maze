@@ -59,11 +59,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-8q-HTt">
+                                <rect key="frame" x="138" y="626.5" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0rv-Jb-DuB" firstAttribute="centerY" secondItem="rxd-ya-oPv" secondAttribute="centerY" id="3rp-bT-gYq"/>
+                            <constraint firstItem="Ks7-YX-8dt" firstAttribute="bottom" secondItem="Oc0-8q-HTt" secondAttribute="bottom" constant="20" id="Nqn-yQ-thy"/>
                             <constraint firstItem="0rv-Jb-DuB" firstAttribute="centerX" secondItem="rxd-ya-oPv" secondAttribute="centerX" id="Smn-Pz-TzU"/>
+                            <constraint firstItem="Oc0-8q-HTt" firstAttribute="centerX" secondItem="rxd-ya-oPv" secondAttribute="centerX" id="UFa-Eh-bNu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ks7-YX-8dt"/>
                     </view>
@@ -71,6 +79,7 @@
                     <connections>
                         <outlet property="LBBut" destination="uqy-gq-V1b" id="A2X-Vs-0cd"/>
                         <outlet property="StartBut" destination="9aS-7A-Gbf" id="ONj-9A-2p1"/>
+                        <outlet property="userText" destination="Oc0-8q-HTt" id="C4b-ct-eFl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDA-N9-TnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,6 +150,11 @@
                         <viewLayoutGuide key="safeArea" id="YEw-ve-eG3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="dM1-ZL-fwJ"/>
+                    <connections>
+                        <outlet property="musicSwitch" destination="9S2-GO-IWy" id="ybH-R6-5z6"/>
+                        <outlet property="sfxSwitch" destination="LkM-YJ-bM5" id="JKh-WJ-MIX"/>
+                        <outlet property="userText" destination="hYp-P6-eEG" id="8mL-S3-AFJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIk-8K-a8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,8 +272,10 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="gPw-mx-3Sl" id="Jra-Ha-GQB"/>
+                        <outlet property="musicSwitch" destination="HSP-Yg-5ss" id="Po1-7b-42j"/>
                         <outlet property="restartButton" destination="RTf-R9-TRq" id="gjo-6J-NW2"/>
                         <outlet property="resumeButton" destination="tJY-tF-MKh" id="Mb7-bZ-IgU"/>
+                        <outlet property="sfxSwitch" destination="rtM-bk-Ckj" id="8ie-RB-XXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9L-wJ-r9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,7 +471,7 @@
                     <connections>
                         <outlet property="exitButton" destination="P6X-Uk-XA8" id="oal-2m-Agm"/>
                         <outlet property="nextButton" destination="juQ-Q3-1Bm" id="8NB-aW-qYO"/>
-                        <outlet property="scoreText" destination="QlG-5j-Y7p" id="CzK-ED-zxO"/>
+                        <outlet property="scoreText" destination="QlG-5j-Y7p" id="bnz-tv-RoF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6W-jR-SRm" userLabel="First Responder" sceneMemberID="firstResponder"/>

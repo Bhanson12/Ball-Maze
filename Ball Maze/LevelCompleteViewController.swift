@@ -14,16 +14,35 @@ class LevelCompleteViewController: UIViewController {
     @IBOutlet weak var scoreText: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
+ 
     
     var option = 0
     var scoreIn: Int!
-    var score: Score?
+    var scores = [Score]()
+    var settings: Settings?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        scoreText.text = "Score: " + String(scoreIn)
+        
+        if let savedSettings = loadSettings() {
+            settings = savedSettings
+            os_log("Loading saved settings", log: OSLog.default, type: .debug)
+        }  else {
+            settings?.user = "default"
+        }
+        
+        if let savedScores = loadScores() {
+            scores += savedScores
+        }
     }
     
 
@@ -37,20 +56,28 @@ class LevelCompleteViewController: UIViewController {
             option = 0
         } else if let button = sender as? UIButton, button === exitButton {
             SFXController.sharedSFX.playQuitSound()
-            score = Score(user:"test", score: scoreIn)
-            saveScore()
+            scores.append(Score(user: (settings?.user)!, score: scoreIn)!)
+            saveScores()
             option = 1
         } else {
             return
         }
     }
     
-    private func saveScore() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(score, toFile: Score.ArchiveURL.path)
+    private func saveScores() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(scores, toFile: Score.ArchiveURL.path)
         if isSuccessfulSave {
             os_log("Score successfully saved.", log: OSLog.default, type: .debug)
         } else {
             os_log("Failed to save score...", log: OSLog.default, type: .error)
         }
+    }
+    
+    private func loadScores() -> [Score]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Score.ArchiveURL.path) as? [Score]
+    }
+    
+    private func loadSettings() -> Settings? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
     }
 }

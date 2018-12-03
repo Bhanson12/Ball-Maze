@@ -52,11 +52,14 @@ class Score: NSObject, NSCoding {
             return nil
         }
         
-        let score = aDecoder.decodeObject(forKey: PropertyKey.score)
+        guard let score = aDecoder.decodeInteger(forKey: PropertyKey.score)  as? Int else {
+            os_log("Unable to decode the score for a Score object.", log: OSLog.default, type: .debug)
+            return nil
+        }
         
         
         // Must call designated initializer.
-        self.init(user: user, score: score as! Int)
+        self.init(user: user, score: score)
     }
     
     //MARK: Archiving Paths
