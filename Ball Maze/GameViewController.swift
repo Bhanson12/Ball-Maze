@@ -200,7 +200,6 @@ class GameViewController: UIViewController {
                 // next level
                 currentLevel.incrementLevel()
                 setupGame()
-                
             case 1:
                 self.navigationController?.popToRootViewController(animated: false)
             default:

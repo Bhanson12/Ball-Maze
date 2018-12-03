@@ -1,534 +1,534 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 50;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 50;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */; };
-		4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506084219FD0E100CDB4F7 /* VectorOperations.swift */; };
+        4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */; };
+        4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506084219FD0E100CDB4F7 /* VectorOperations.swift */; };
 		4F5720C621B5052600D3D819 /* level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5720C521B5052600D3D819 /* level.swift */; };
-		4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2D8219CCB8700955460 /* AppDelegate.swift */; };
-		4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DC219CCB8700955460 /* GameViewController.swift */; };
-		4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DE219CCB8700955460 /* Main.storyboard */; };
-		4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E1219CCB9400955460 /* Assets.xcassets */; };
-		4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */; };
-		4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */; };
-		4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2FB219CDED000955460 /* BallMaze.scnassets */; };
-		D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBB21B493FE00960A88 /* MusicController.swift */; };
-		D449EDBE21B4993100960A88 /* SFXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBD21B4993100960A88 /* SFXController.swift */; };
-		D449EDC121B49C5D00960A88 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = D449EDBF21B49C5C00960A88 /* Music */; };
-		D449EDC221B49C5D00960A88 /* SFX in Resources */ = {isa = PBXBuildFile; fileRef = D449EDC021B49C5C00960A88 /* SFX */; };
-		D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */; };
-		D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */; };
-		D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */; };
-		D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE421B364F200FB468F /* SettingsViewController.swift */; };
-		D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45B21B4CB2200CB7469 /* Score.swift */; };
-		D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */; };
-		D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */; };
+        4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2D8219CCB8700955460 /* AppDelegate.swift */; };
+        4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DC219CCB8700955460 /* GameViewController.swift */; };
+        4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DE219CCB8700955460 /* Main.storyboard */; };
+        4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E1219CCB9400955460 /* Assets.xcassets */; };
+        4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */; };
+        4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */; };
+        4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2FB219CDED000955460 /* BallMaze.scnassets */; };
+        D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBB21B493FE00960A88 /* MusicController.swift */; };
+        D449EDBE21B4993100960A88 /* SFXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBD21B4993100960A88 /* SFXController.swift */; };
+        D449EDC121B49C5D00960A88 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = D449EDBF21B49C5C00960A88 /* Music */; };
+        D449EDC221B49C5D00960A88 /* SFX in Resources */ = {isa = PBXBuildFile; fileRef = D449EDC021B49C5C00960A88 /* SFX */; };
+        D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */; };
+        D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */; };
+        D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */; };
+        D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE421B364F200FB468F /* SettingsViewController.swift */; };
+        D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45B21B4CB2200CB7469 /* Score.swift */; };
+        D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */; };
+        D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4FDEB2EC219CCB9500955460 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FDEB2CD219CCB8700955460 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4FDEB2D4219CCB8700955460;
-			remoteInfo = "Ball Maze";
-		};
+        4FDEB2EC219CCB9500955460 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 4FDEB2CD219CCB8700955460 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 4FDEB2D4219CCB8700955460;
+            remoteInfo = "Ball Maze";
+        };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionHelper.swift; sourceTree = "<group>"; };
-		4F506084219FD0E100CDB4F7 /* VectorOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorOperations.swift; sourceTree = "<group>"; };
+        4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionHelper.swift; sourceTree = "<group>"; };
+        4F506084219FD0E100CDB4F7 /* VectorOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorOperations.swift; sourceTree = "<group>"; };
 		4F5720C521B5052600D3D819 /* level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level.swift; sourceTree = "<group>"; };
-		4FDEB2D5219CCB8700955460 /* Ball Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ball Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FDEB2D8219CCB8700955460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FDEB2DC219CCB8700955460 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		4FDEB2DF219CCB8700955460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4FDEB2E1219CCB9400955460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4FDEB2E4219CCB9400955460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4FDEB2E6219CCB9400955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ball MazeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball_MazeTests.swift; sourceTree = "<group>"; };
-		4FDEB2F1219CCB9500955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FDEB2FB219CDED000955460 /* BallMaze.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = BallMaze.scnassets; sourceTree = "<group>"; };
-		D449EDBB21B493FE00960A88 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
-		D449EDBD21B4993100960A88 /* SFXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFXController.swift; sourceTree = "<group>"; };
-		D449EDBF21B49C5C00960A88 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
-		D449EDC021B49C5C00960A88 /* SFX */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFX; sourceTree = "<group>"; };
-		D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewController.swift; sourceTree = "<group>"; };
-		D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
-		D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		D4D7FCE421B364F200FB468F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D4FCA45B21B4CB2200CB7469 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompleteViewController.swift; sourceTree = "<group>"; };
-		D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewCell.swift; sourceTree = "<group>"; };
+        4FDEB2D5219CCB8700955460 /* Ball Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ball Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+        4FDEB2D8219CCB8700955460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        4FDEB2DC219CCB8700955460 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+        4FDEB2DF219CCB8700955460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+        4FDEB2E1219CCB9400955460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        4FDEB2E4219CCB9400955460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        4FDEB2E6219CCB9400955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ball MazeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+        4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball_MazeTests.swift; sourceTree = "<group>"; };
+        4FDEB2F1219CCB9500955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        4FDEB2FB219CDED000955460 /* BallMaze.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = BallMaze.scnassets; sourceTree = "<group>"; };
+        D449EDBB21B493FE00960A88 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
+        D449EDBD21B4993100960A88 /* SFXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFXController.swift; sourceTree = "<group>"; };
+        D449EDBF21B49C5C00960A88 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
+        D449EDC021B49C5C00960A88 /* SFX */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFX; sourceTree = "<group>"; };
+        D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewController.swift; sourceTree = "<group>"; };
+        D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+        D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+        D4D7FCE421B364F200FB468F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+        D4FCA45B21B4CB2200CB7469 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+        D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompleteViewController.swift; sourceTree = "<group>"; };
+        D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4FDEB2D2219CCB8700955460 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4FDEB2E8219CCB9500955460 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4FDEB2D2219CCB8700955460 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4FDEB2E8219CCB9500955460 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4FDEB2CC219CCB8700955460 = {
-			isa = PBXGroup;
-			children = (
-				4FDEB2D7219CCB8700955460 /* Ball Maze */,
-				4FDEB2EE219CCB9500955460 /* Ball MazeTests */,
-				4FDEB2D6219CCB8700955460 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		4FDEB2D6219CCB8700955460 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4FDEB2D5219CCB8700955460 /* Ball Maze.app */,
-				4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4FDEB2D7219CCB8700955460 /* Ball Maze */ = {
-			isa = PBXGroup;
-			children = (
-				D449EDBF21B49C5C00960A88 /* Music */,
-				D449EDC021B49C5C00960A88 /* SFX */,
-				4FDEB2D8219CCB8700955460 /* AppDelegate.swift */,
-				4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */,
-				D4FCA45B21B4CB2200CB7469 /* Score.swift */,
-				4F506084219FD0E100CDB4F7 /* VectorOperations.swift */,
-				D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */,
-				D4D7FCE421B364F200FB468F /* SettingsViewController.swift */,
-				D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */,
-				D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */,
-				4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
+        4FDEB2CC219CCB8700955460 = {
+            isa = PBXGroup;
+            children = (
+                4FDEB2D7219CCB8700955460 /* Ball Maze */,
+                4FDEB2EE219CCB9500955460 /* Ball MazeTests */,
+                4FDEB2D6219CCB8700955460 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        4FDEB2D6219CCB8700955460 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                4FDEB2D5219CCB8700955460 /* Ball Maze.app */,
+                4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        4FDEB2D7219CCB8700955460 /* Ball Maze */ = {
+            isa = PBXGroup;
+            children = (
+                D449EDBF21B49C5C00960A88 /* Music */,
+                D449EDC021B49C5C00960A88 /* SFX */,
+                4FDEB2D8219CCB8700955460 /* AppDelegate.swift */,
+                4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */,
+                D4FCA45B21B4CB2200CB7469 /* Score.swift */,
+                4F506084219FD0E100CDB4F7 /* VectorOperations.swift */,
+                D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */,
+                D4D7FCE421B364F200FB468F /* SettingsViewController.swift */,
+                D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */,
+                D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */,
+                4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
 				4F5720C521B5052600D3D819 /* level.swift */,
-				D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */,
-				D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */,
-				D449EDBB21B493FE00960A88 /* MusicController.swift */,
-				D449EDBD21B4993100960A88 /* SFXController.swift */,
-				4FDEB2DE219CCB8700955460 /* Main.storyboard */,
-				4FDEB2FB219CDED000955460 /* BallMaze.scnassets */,
-				4FDEB2E1219CCB9400955460 /* Assets.xcassets */,
-				4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */,
-				4FDEB2E6219CCB9400955460 /* Info.plist */,
-			);
-			path = "Ball Maze";
-			sourceTree = "<group>";
-		};
-		4FDEB2EE219CCB9500955460 /* Ball MazeTests */ = {
-			isa = PBXGroup;
-			children = (
-				4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */,
-				4FDEB2F1219CCB9500955460 /* Info.plist */,
-			);
-			path = "Ball MazeTests";
-			sourceTree = "<group>";
-		};
+                D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */,
+                D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */,
+                D449EDBB21B493FE00960A88 /* MusicController.swift */,
+                D449EDBD21B4993100960A88 /* SFXController.swift */,
+                4FDEB2DE219CCB8700955460 /* Main.storyboard */,
+                4FDEB2FB219CDED000955460 /* BallMaze.scnassets */,
+                4FDEB2E1219CCB9400955460 /* Assets.xcassets */,
+                4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */,
+                4FDEB2E6219CCB9400955460 /* Info.plist */,
+            );
+            path = "Ball Maze";
+            sourceTree = "<group>";
+        };
+        4FDEB2EE219CCB9500955460 /* Ball MazeTests */ = {
+            isa = PBXGroup;
+            children = (
+                4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */,
+                4FDEB2F1219CCB9500955460 /* Info.plist */,
+            );
+            path = "Ball MazeTests";
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4FDEB2D4219CCB8700955460 /* Ball Maze */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4FDEB2F4219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball Maze" */;
-			buildPhases = (
-				4FDEB2D1219CCB8700955460 /* Sources */,
-				4FDEB2D2219CCB8700955460 /* Frameworks */,
-				4FDEB2D3219CCB8700955460 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Ball Maze";
-			productName = "Ball Maze";
-			productReference = 4FDEB2D5219CCB8700955460 /* Ball Maze.app */;
-			productType = "com.apple.product-type.application";
-		};
-		4FDEB2EA219CCB9500955460 /* Ball MazeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4FDEB2F7219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball MazeTests" */;
-			buildPhases = (
-				4FDEB2E7219CCB9500955460 /* Sources */,
-				4FDEB2E8219CCB9500955460 /* Frameworks */,
-				4FDEB2E9219CCB9500955460 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4FDEB2ED219CCB9500955460 /* PBXTargetDependency */,
-			);
-			name = "Ball MazeTests";
-			productName = "Ball MazeTests";
-			productReference = 4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
+        4FDEB2D4219CCB8700955460 /* Ball Maze */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4FDEB2F4219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball Maze" */;
+            buildPhases = (
+                4FDEB2D1219CCB8700955460 /* Sources */,
+                4FDEB2D2219CCB8700955460 /* Frameworks */,
+                4FDEB2D3219CCB8700955460 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = "Ball Maze";
+            productName = "Ball Maze";
+            productReference = 4FDEB2D5219CCB8700955460 /* Ball Maze.app */;
+            productType = "com.apple.product-type.application";
+        };
+        4FDEB2EA219CCB9500955460 /* Ball MazeTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4FDEB2F7219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball MazeTests" */;
+            buildPhases = (
+                4FDEB2E7219CCB9500955460 /* Sources */,
+                4FDEB2E8219CCB9500955460 /* Frameworks */,
+                4FDEB2E9219CCB9500955460 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                4FDEB2ED219CCB9500955460 /* PBXTargetDependency */,
+            );
+            name = "Ball MazeTests";
+            productName = "Ball MazeTests";
+            productReference = 4FDEB2EB219CCB9500955460 /* Ball MazeTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4FDEB2CD219CCB8700955460 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Braydon Hanson";
-				TargetAttributes = {
-					4FDEB2D4219CCB8700955460 = {
-						CreatedOnToolsVersion = 10.0;
-					};
-					4FDEB2EA219CCB9500955460 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 4FDEB2D4219CCB8700955460;
-					};
-				};
-			};
-			buildConfigurationList = 4FDEB2D0219CCB8700955460 /* Build configuration list for PBXProject "Ball Maze" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 4FDEB2CC219CCB8700955460;
-			productRefGroup = 4FDEB2D6219CCB8700955460 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				4FDEB2D4219CCB8700955460 /* Ball Maze */,
-				4FDEB2EA219CCB9500955460 /* Ball MazeTests */,
-			);
-		};
+        4FDEB2CD219CCB8700955460 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastSwiftUpdateCheck = 1000;
+                LastUpgradeCheck = 1000;
+                ORGANIZATIONNAME = "Braydon Hanson";
+                TargetAttributes = {
+                    4FDEB2D4219CCB8700955460 = {
+                        CreatedOnToolsVersion = 10.0;
+                    };
+                    4FDEB2EA219CCB9500955460 = {
+                        CreatedOnToolsVersion = 10.0;
+                        TestTargetID = 4FDEB2D4219CCB8700955460;
+                    };
+                };
+            };
+            buildConfigurationList = 4FDEB2D0219CCB8700955460 /* Build configuration list for PBXProject "Ball Maze" */;
+            compatibilityVersion = "Xcode 9.3";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 4FDEB2CC219CCB8700955460;
+            productRefGroup = 4FDEB2D6219CCB8700955460 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                4FDEB2D4219CCB8700955460 /* Ball Maze */,
+                4FDEB2EA219CCB9500955460 /* Ball MazeTests */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4FDEB2D3219CCB8700955460 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D449EDC121B49C5D00960A88 /* Music in Resources */,
-				D449EDC221B49C5D00960A88 /* SFX in Resources */,
-				4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */,
-				4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */,
-				4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */,
-				4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4FDEB2E9219CCB9500955460 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4FDEB2D3219CCB8700955460 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                D449EDC121B49C5D00960A88 /* Music in Resources */,
+                D449EDC221B49C5D00960A88 /* SFX in Resources */,
+                4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */,
+                4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */,
+                4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */,
+                4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4FDEB2E9219CCB9500955460 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4FDEB2D1219CCB8700955460 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */,
-				D449EDBE21B4993100960A88 /* SFXController.swift in Sources */,
-				D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */,
-				4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */,
-				D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */,
-				4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */,
+        4FDEB2D1219CCB8700955460 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */,
+                D449EDBE21B4993100960A88 /* SFXController.swift in Sources */,
+                D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */,
+                4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */,
+                D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */,
+                4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */,
 				4F5720C621B5052600D3D819 /* level.swift in Sources */,
-				D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */,
-				4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */,
-				D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */,
-				4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */,
-				D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */,
-				D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */,
-				D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4FDEB2E7219CCB9500955460 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */,
+                4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */,
+                D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */,
+                4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */,
+                D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */,
+                D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */,
+                D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4FDEB2E7219CCB9500955460 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4FDEB2ED219CCB9500955460 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4FDEB2D4219CCB8700955460 /* Ball Maze */;
-			targetProxy = 4FDEB2EC219CCB9500955460 /* PBXContainerItemProxy */;
-		};
+        4FDEB2ED219CCB9500955460 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 4FDEB2D4219CCB8700955460 /* Ball Maze */;
+            targetProxy = 4FDEB2EC219CCB9500955460 /* PBXContainerItemProxy */;
+        };
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4FDEB2DE219CCB8700955460 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4FDEB2DF219CCB8700955460 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4FDEB2E4219CCB9400955460 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
+        4FDEB2DE219CCB8700955460 /* Main.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                4FDEB2DF219CCB8700955460 /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+        4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                4FDEB2E4219CCB9400955460 /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4FDEB2F2219CCB9500955460 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		4FDEB2F3219CCB9500955460 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4FDEB2F5219CCB9500955460 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V742T8V8F9;
-				INFOPLIST_FILE = "Ball Maze/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4FDEB2F6219CCB9500955460 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V742T8V8F9;
-				INFOPLIST_FILE = "Ball Maze/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4FDEB2F8219CCB9500955460 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Ball MazeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-MazeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ball Maze.app/Ball Maze";
-			};
-			name = Debug;
-		};
-		4FDEB2F9219CCB9500955460 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Ball MazeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-MazeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ball Maze.app/Ball Maze";
-			};
-			name = Release;
-		};
+        4FDEB2F2219CCB9500955460 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+                MTL_FAST_MATH = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            };
+            name = Debug;
+        };
+        4FDEB2F3219CCB9500955460 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                MTL_FAST_MATH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_COMPILATION_MODE = wholemodule;
+                SWIFT_OPTIMIZATION_LEVEL = "-O";
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        4FDEB2F5219CCB9500955460 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = V742T8V8F9;
+                INFOPLIST_FILE = "Ball Maze/Info.plist";
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        4FDEB2F6219CCB9500955460 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = V742T8V8F9;
+                INFOPLIST_FILE = "Ball Maze/Info.plist";
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
+        4FDEB2F8219CCB9500955460 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = "Ball MazeTests/Info.plist";
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                    "@loader_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-MazeTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ball Maze.app/Ball Maze";
+            };
+            name = Debug;
+        };
+        4FDEB2F9219CCB9500955460 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = "Ball MazeTests/Info.plist";
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                    "@loader_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-MazeTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ball Maze.app/Ball Maze";
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FDEB2D0219CCB8700955460 /* Build configuration list for PBXProject "Ball Maze" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4FDEB2F2219CCB9500955460 /* Debug */,
-				4FDEB2F3219CCB9500955460 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4FDEB2F4219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball Maze" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4FDEB2F5219CCB9500955460 /* Debug */,
-				4FDEB2F6219CCB9500955460 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4FDEB2F7219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball MazeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4FDEB2F8219CCB9500955460 /* Debug */,
-				4FDEB2F9219CCB9500955460 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        4FDEB2D0219CCB8700955460 /* Build configuration list for PBXProject "Ball Maze" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4FDEB2F2219CCB9500955460 /* Debug */,
+                4FDEB2F3219CCB9500955460 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4FDEB2F4219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball Maze" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4FDEB2F5219CCB9500955460 /* Debug */,
+                4FDEB2F6219CCB9500955460 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4FDEB2F7219CCB9500955460 /* Build configuration list for PBXNativeTarget "Ball MazeTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4FDEB2F8219CCB9500955460 /* Debug */,
+                4FDEB2F9219CCB9500955460 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
-	};
-	rootObject = 4FDEB2CD219CCB8700955460 /* Project object */;
+    };
+    rootObject = 4FDEB2CD219CCB8700955460 /* Project object */;
 }
