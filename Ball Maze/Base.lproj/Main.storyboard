@@ -31,6 +31,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
+                                            <action selector="StartButton:" destination="aJz-6o-Y2b" eventType="touchUpInside" id="VQJ-5F-Dax"/>
                                             <segue destination="BV1-FR-VrT" kind="show" id="3rP-nF-Lp9"/>
                                         </connections>
                                     </button>
@@ -39,6 +40,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Leaderboards"/>
                                         <connections>
+                                            <action selector="LBButton:" destination="aJz-6o-Y2b" eventType="touchUpInside" id="anK-SS-7Oj"/>
                                             <segue destination="4EF-dz-8AB" kind="show" id="al6-57-Pvo"/>
                                         </connections>
                                     </button>
@@ -51,6 +53,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" title="Button" image="settings"/>
                                         <connections>
+                                            <action selector="SettingsButton:" destination="aJz-6o-Y2b" eventType="touchUpInside" id="WTM-qP-8KD"/>
                                             <segue destination="J6E-Id-M1o" kind="show" id="uK2-G3-LcJ"/>
                                         </connections>
                                     </button>
@@ -93,6 +96,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkM-YJ-bM5">
                                         <rect key="frame" x="125.5" y="28.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="sfxSwitch:" destination="J6E-Id-M1o" eventType="valueChanged" id="6SF-sy-bEa"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bao-ax-YRC">
                                         <rect key="frame" x="127.5" y="67.5" width="45.5" height="20.5"/>
@@ -102,6 +108,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-GO-IWy">
                                         <rect key="frame" x="125.5" y="96" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="musicSwitch:" destination="J6E-Id-M1o" eventType="valueChanged" id="x4m-48-cR6"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTh-3F-jdp">
                                         <rect key="frame" x="102" y="135" width="96.5" height="20.5"/>
@@ -198,11 +207,11 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-bk-Ckj">
                                                                 <rect key="frame" x="23" y="20.5" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="sfxSwitch:" destination="x4m-gS-09A" eventType="valueChanged" id="RcM-fq-sGf"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="TLV-Uj-au1"/>
-                                                        </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8t9-Ob-Fnb">
                                                         <rect key="frame" x="95" y="0.0" width="95" height="51.5"/>
@@ -215,11 +224,11 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSP-Yg-5ss">
                                                                 <rect key="frame" x="23" y="20.5" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="musicSwitch:" destination="x4m-gS-09A" eventType="valueChanged" id="KLn-Mi-BCG"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="90" id="QUo-bF-ETs"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
@@ -281,7 +290,7 @@
         <!--Leaderboard-->
         <scene sceneID="igk-c2-sBL">
             <objects>
-                <tableViewController id="4EF-dz-8AB" sceneMemberID="viewController">
+                <tableViewController id="4EF-dz-8AB" customClass="LBTableViewController" customModule="Ball_Maze" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYH-v6-3P3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

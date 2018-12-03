@@ -16,9 +16,13 @@
 		4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */; };
 		4FDEB2F0219CCB9500955460 /* Ball_MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */; };
 		4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2FB219CDED000955460 /* BallMaze.scnassets */; };
+		D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBB21B493FE00960A88 /* MusicController.swift */; };
+		D449EDBE21B4993100960A88 /* SFXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDBD21B4993100960A88 /* SFXController.swift */; };
+		D449EDC121B49C5D00960A88 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = D449EDBF21B49C5C00960A88 /* Music */; };
+		D449EDC221B49C5D00960A88 /* SFX in Resources */ = {isa = PBXBuildFile; fileRef = D449EDC021B49C5C00960A88 /* SFX */; };
+		D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */; };
 		D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */; };
 		D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */; };
-		D4D7FCE321B362DC00FB468F /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE221B362DC00FB468F /* LBViewController.swift */; };
 		D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE421B364F200FB468F /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +50,13 @@
 		4FDEB2EF219CCB9500955460 /* Ball_MazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball_MazeTests.swift; sourceTree = "<group>"; };
 		4FDEB2F1219CCB9500955460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDEB2FB219CDED000955460 /* BallMaze.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = BallMaze.scnassets; sourceTree = "<group>"; };
+		D449EDBB21B493FE00960A88 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
+		D449EDBD21B4993100960A88 /* SFXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFXController.swift; sourceTree = "<group>"; };
+		D449EDBF21B49C5C00960A88 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
+		D449EDC021B49C5C00960A88 /* SFX */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFX; sourceTree = "<group>"; };
+		D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewController.swift; sourceTree = "<group>"; };
 		D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		D4D7FCE221B362DC00FB468F /* LBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
 		D4D7FCE421B364F200FB468F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,15 +99,19 @@
 		4FDEB2D7219CCB8700955460 /* Ball Maze */ = {
 			isa = PBXGroup;
 			children = (
+				D449EDBF21B49C5C00960A88 /* Music */,
+				D449EDC021B49C5C00960A88 /* SFX */,
 				4FDEB2D8219CCB8700955460 /* AppDelegate.swift */,
 				4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */,
 				4F506084219FD0E100CDB4F7 /* VectorOperations.swift */,
 				4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
 				D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */,
+				D449EDBB21B493FE00960A88 /* MusicController.swift */,
+				D449EDBD21B4993100960A88 /* SFXController.swift */,
 				D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */,
-				D4D7FCE221B362DC00FB468F /* LBViewController.swift */,
 				D4D7FCE421B364F200FB468F /* SettingsViewController.swift */,
 				4FDEB2DE219CCB8700955460 /* Main.storyboard */,
+				D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */,
 				4FDEB2FB219CDED000955460 /* BallMaze.scnassets */,
 				4FDEB2E1219CCB9400955460 /* Assets.xcassets */,
 				4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */,
@@ -198,6 +210,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D449EDC121B49C5D00960A88 /* Music in Resources */,
+				D449EDC221B49C5D00960A88 /* SFX in Resources */,
 				4FDEB2E5219CCB9400955460 /* LaunchScreen.storyboard in Resources */,
 				4FDEB2FC219CDED000955460 /* BallMaze.scnassets in Resources */,
 				4FDEB2E2219CCB9400955460 /* Assets.xcassets in Resources */,
@@ -220,8 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */,
+				D449EDBE21B4993100960A88 /* SFXController.swift in Sources */,
+				D449EDC421B4A8EE00960A88 /* LBTableViewController.swift in Sources */,
 				4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */,
-				D4D7FCE321B362DC00FB468F /* LBViewController.swift in Sources */,
+				D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */,
 				4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */,
 				D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */,
 				4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */,

@@ -8,6 +8,9 @@
 
 import UIKit
 import SceneKit
+import AVKit
+
+var music:AVAudioPlayer?
 
 class MenuViewController: UIViewController {
 
@@ -20,11 +23,20 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
- 
+        MusicController.sharedMusic.play()
     }
     
-
+    @IBAction func StartButton(_ sender: Any) {
+        SFXController.sharedSFX.playStartSound()
+    }
+    
+    @IBAction func LBButton(_ sender: Any) {
+        SFXController.sharedSFX.playButtonSound()
+    }
+    
+    @IBAction func SettingsButton(_ sender: Any) {
+        SFXController.sharedSFX.playButtonSound()
+    }
     
     // MARK: - Navigation
 
@@ -47,6 +59,5 @@ class MenuViewController: UIViewController {
         // Set the meal to be passed to MealTableViewController after the unwind segue.
         meal = Meal(name: name, photo: photo, rating: rating)*/
     }
-    
-
 }
+

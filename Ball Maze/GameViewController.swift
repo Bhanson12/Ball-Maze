@@ -11,7 +11,8 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
-
+    var levelScore: Int!
+    var levelTimer: Timer!
     let categoryEndLevel = 8
     
     var scnView: SCNView!
@@ -27,10 +28,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: false)
-        self.navigationController!.navigationBar.isTranslucent = true
         
-        setupWorld()
+        setupGame()
     }
     
     override var shouldAutorotate: Bool {
@@ -42,9 +41,12 @@ class GameViewController: UIViewController {
     }
     
     
-    // MARK: Private Methods
+    // MARK: Setup Methods
     
     func setupView() {
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController!.navigationBar.isTranslucent = true
+        
         scnView = self.view as! SCNView
         scnView.delegate = self
         scnView.allowsCameraControl = true
@@ -96,7 +98,7 @@ class GameViewController: UIViewController {
         endLevelNode = scnScene.rootNode.childNode(withName: "endBox", recursively: true)!
     }
     
-    func setupWorld(){
+    func setupWorld() {
         setupView()
         setupScene()
         setupCameraAndLighting()
@@ -104,11 +106,39 @@ class GameViewController: UIViewController {
         setupLevel()
     }
     
-    func setupUI() {
-        let mainMenuButton = UIButton()
-        
-        
+    func setupTimer() {
+        levelTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(calcScore), userInfo: nil, repeats: true)
     }
+    
+    func setupScore() {
+        levelScore = 1000
+    }
+    
+    func setupGame() {
+        setupWorld()
+        setupTimer()
+        setupScore()
+    }
+    
+    // MARK: Helper Functions
+    
+    @objc func calcScore() {
+        if(levelScore >= 0) {
+            levelScore = levelScore - 1
+            print(levelScore)
+        }
+    }
+    
+    func unPause() {
+        scnScene.isPaused = false
+        setupTimer()
+    }
+    
+    func restartLevel() {
+        setupGame()
+        scnScene.isPaused = false
+    }
+    
     
     // MARK: Navigation
     
@@ -121,8 +151,9 @@ class GameViewController: UIViewController {
         guard let button = sender as? UIBarButtonItem, button === pauseButton else {
             return
         }*/
-        
+        levelTimer.invalidate()
         scnScene.isPaused = true
+        SFXController.sharedSFX.playButtonSound()
     }
     
     @IBAction func unwindToGame(sender: UIStoryboardSegue) {
@@ -132,14 +163,13 @@ class GameViewController: UIViewController {
             
             switch option {
             case 0:
-                scnScene.isPaused = false
+                unPause()
             case 1:
-                setupWorld()
-                scnScene.isPaused = false
+                restartLevel()
             case 2:
                 self.navigationController?.popToRootViewController(animated: false)
             default:
-                scnScene.isPaused = false
+                self.navigationController?.popToRootViewController(animated: false)
             }
         }
     }
