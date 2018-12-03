@@ -11,6 +11,7 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
+    var totalScore: Int!
     var levelScore: Int!
     var levelTimer: Timer!
     let categoryEndLevel = 8
@@ -29,6 +30,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        totalScore = 0
         setupGame()
     }
     
@@ -126,7 +128,16 @@ class GameViewController: UIViewController {
         if(levelScore >= 0) {
             levelScore = levelScore - 1
             print(levelScore)
-        }
+        }/*
+        if(levelScore == 998) {
+            levelTimer.invalidate()
+            scnScene.isPaused = true
+            self.performSegue(withIdentifier: "LevelComplete", sender: nil)
+        }*/
+    }
+    
+    func getScore() -> Int {
+        return totalScore
     }
     
     func unPause() {
@@ -146,20 +157,30 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         super.prepare(for: segue, sender: sender)
-        /*
-        // Configure the destination view controller only when the pause button is pressed.
-        guard let button = sender as? UIBarButtonItem, button === pauseButton else {
-            return
-        }*/
-        levelTimer.invalidate()
-        scnScene.isPaused = true
-        SFXController.sharedSFX.playButtonSound()
+        
+        // Configure the destination view controller for pausing only when the pause button is pressed.
+        // else the level is completed
+        if let button = sender as? UIBarButtonItem, button === self.navigationItem.rightBarButtonItem {
+            levelTimer.invalidate()
+            scnScene.isPaused = true
+            SFXController.sharedSFX.playButtonSound()
+        } else {
+            totalScore = totalScore + levelScore
+            if segue.identifier == "LevelComplete" {
+                if let destVC = segue.destination as? LevelCompleteViewController {
+                    destVC.scoreIn = totalScore
+                }
+            }
+            totalScore = totalScore + levelScore
+            levelTimer.invalidate()
+            
+        }
+        
     }
     
     @IBAction func unwindToGame(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? PauseViewController{
+        if let sourceViewController = sender.source as? PauseViewController {
             let option = sourceViewController.option
-            print(option)
             
             switch option {
             case 0:
@@ -167,6 +188,18 @@ class GameViewController: UIViewController {
             case 1:
                 restartLevel()
             case 2:
+                self.navigationController?.popToRootViewController(animated: false)
+            default:
+                self.navigationController?.popToRootViewController(animated: false)
+            }
+        } else if let sourceViewController = sender.source as? LevelCompleteViewController {
+            let option = sourceViewController.option
+            
+            switch option {
+            case 0:
+                // next level
+                setupGame()
+            case 1:
                 self.navigationController?.popToRootViewController(animated: false)
             default:
                 self.navigationController?.popToRootViewController(animated: false)
@@ -199,14 +232,9 @@ extension GameViewController: SCNPhysicsContactDelegate {
         }
         
         if contactNode.physicsBody?.categoryBitMask == categoryEndLevel {
-            
-            let alert = UIAlertController(title: "Level Completed", message: "Continue to next Level", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Main Menu", style: .default, handler: nil))
-            
-            alert.addAction(UIAlertAction(title: "Next Level", style: .default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
+            levelTimer.invalidate()
+            scnScene.isPaused = true
+            self.performSegue(withIdentifier: "LevelComplete", sender: nil)
         }
     }
     

@@ -9,16 +9,22 @@
 import UIKit
 
 class LBTableViewController: UITableViewController {
-
+    //MARK: Properties
+    
+    var scores = [Score]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Main Menu", style: .plain, target: self, action: #selector(backButtonPressed))
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        if let savedScores = loadScores() {
+            scores += savedScores
+        }
+        else {
+            // Load the sample data.
+            loadSampleScores()
+        }
     }
     
     @objc func backButtonPressed() {
@@ -30,24 +36,31 @@ class LBTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return scores.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cellIdentifier = "LBTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LBTableViewCell
+            else {
+            fatalError("The dequeued cell is not an instance of ScoreTableViewCell.")
+        }
+        
+        let score = scores[indexPath.row]
+        
+        cell.userLabel.text = score.user
+        cell.scoreLabel.text = String(score.score)
+        
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,4 +107,27 @@ class LBTableViewController: UITableViewController {
     }
     */
 
+    
+    //MARK: Private Methods
+    
+    private func loadSampleScores() {
+    
+        guard let score1 = Score(user: "Bob", score: 1209) else {
+            fatalError("Unable to instantiate score1")
+        }
+        
+        guard let score2 = Score(user: "Jeff", score: 121) else {
+            fatalError("Unable to instantiate score2")
+        }
+        
+        guard let score3 = Score(user: "Linda", score: 302) else {
+            fatalError("Unable to instantiate score3")
+        }
+        
+        scores += [score1, score2, score3]
+    }
+    
+    private func loadScores() -> [Score]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Score.ArchiveURL.path) as? [Score]
+    }
 }
