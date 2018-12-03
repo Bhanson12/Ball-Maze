@@ -14,7 +14,6 @@ import UIKit
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
-    
     var option = 0
     
     override func viewDidLoad() {

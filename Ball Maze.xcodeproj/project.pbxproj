@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */; };
 		4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F506084219FD0E100CDB4F7 /* VectorOperations.swift */; };
+		4F5720C621B5052600D3D819 /* level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5720C521B5052600D3D819 /* level.swift */; };
 		4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2D8219CCB8700955460 /* AppDelegate.swift */; };
 		4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DC219CCB8700955460 /* GameViewController.swift */; };
 		4FDEB2E0219CCB8700955460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB2DE219CCB8700955460 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */; };
 		D4D7FCE121B35CAC00FB468F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */; };
 		D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7FCE421B364F200FB468F /* SettingsViewController.swift */; };
+		D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45B21B4CB2200CB7469 /* Score.swift */; };
+		D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */; };
+		D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,7 @@
 /* Begin PBXFileReference section */
 		4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionHelper.swift; sourceTree = "<group>"; };
 		4F506084219FD0E100CDB4F7 /* VectorOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorOperations.swift; sourceTree = "<group>"; };
+		4F5720C521B5052600D3D819 /* level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level.swift; sourceTree = "<group>"; };
 		4FDEB2D5219CCB8700955460 /* Ball Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ball Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEB2D8219CCB8700955460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FDEB2DC219CCB8700955460 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,9 @@
 		D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
 		D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D4D7FCE421B364F200FB468F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D4FCA45B21B4CB2200CB7469 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompleteViewController.swift; sourceTree = "<group>"; };
+		D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +111,19 @@
 				D449EDC021B49C5C00960A88 /* SFX */,
 				4FDEB2D8219CCB8700955460 /* AppDelegate.swift */,
 				4F506082219FCE0B00CDB4F7 /* MotionHelper.swift */,
+				D4FCA45B21B4CB2200CB7469 /* Score.swift */,
 				4F506084219FD0E100CDB4F7 /* VectorOperations.swift */,
-				4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
 				D4D7FCE021B35CAC00FB468F /* MenuViewController.swift */,
+				D4D7FCE421B364F200FB468F /* SettingsViewController.swift */,
+				D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */,
+				D4FCA45F21B4E85E00CB7469 /* LBTableViewCell.swift */,
+				4FDEB2DC219CCB8700955460 /* GameViewController.swift */,
+				4F5720C521B5052600D3D819 /* level.swift */,
+				D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */,
+				D4FCA45D21B4D02300CB7469 /* LevelCompleteViewController.swift */,
 				D449EDBB21B493FE00960A88 /* MusicController.swift */,
 				D449EDBD21B4993100960A88 /* SFXController.swift */,
-				D4D7FCDC21B35ACB00FB468F /* PauseViewController.swift */,
-				D4D7FCE421B364F200FB468F /* SettingsViewController.swift */,
 				4FDEB2DE219CCB8700955460 /* Main.storyboard */,
-				D449EDC321B4A8EE00960A88 /* LBTableViewController.swift */,
 				4FDEB2FB219CDED000955460 /* BallMaze.scnassets */,
 				4FDEB2E1219CCB9400955460 /* Assets.xcassets */,
 				4FDEB2E3219CCB9400955460 /* LaunchScreen.storyboard */,
@@ -239,9 +251,13 @@
 				4F506085219FD0E100CDB4F7 /* VectorOperations.swift in Sources */,
 				D449EDBC21B493FE00960A88 /* MusicController.swift in Sources */,
 				4FDEB2DD219CCB8700955460 /* GameViewController.swift in Sources */,
+				4F5720C621B5052600D3D819 /* level.swift in Sources */,
 				D4D7FCDE21B35ACB00FB468F /* PauseViewController.swift in Sources */,
 				4FDEB2D9219CCB8700955460 /* AppDelegate.swift in Sources */,
+				D4FCA45E21B4D02300CB7469 /* LevelCompleteViewController.swift in Sources */,
 				4F506083219FCE0B00CDB4F7 /* MotionHelper.swift in Sources */,
+				D4FCA45C21B4CB2200CB7469 /* Score.swift in Sources */,
+				D4FCA46021B4E85E00CB7469 /* LBTableViewCell.swift in Sources */,
 				D4D7FCE521B364F200FB468F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V742T8V8F9;
 				INFOPLIST_FILE = "Ball Maze/Info.plist";
@@ -414,6 +431,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -423,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V742T8V8F9;
 				INFOPLIST_FILE = "Ball Maze/Info.plist";
@@ -433,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uregina.Ball-Maze";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDA-N9-TnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="342.27886056971516"/>
+            <point key="canvasLocation" x="52" y="341"/>
         </scene>
         <!--Settings-->
         <scene sceneID="1PV-3s-2eh">
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIk-8K-a8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="1061.9190404797603"/>
+            <point key="canvasLocation" x="52" y="1062"/>
         </scene>
         <!--Pause View Controller-->
         <scene sceneID="ZoJ-b0-EZD">
@@ -265,13 +265,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9L-wJ-r9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XH4-b1-gjU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="-439.43028485757122"/>
+            <point key="canvasLocation" x="900" y="-375"/>
         </scene>
         <!--Level-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Ball_Maze" customModuleProvider="target" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="M6G-GB-Iyu">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="M6G-GB-Iyu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </sceneKitView>
@@ -282,10 +282,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="yyt-2V-sm3" kind="presentation" identifier="LevelComplete" animates="NO" id="ZLO-ZA-dSS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="342"/>
+            <point key="canvasLocation" x="900" y="340"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="igk-c2-sBL">
@@ -314,7 +317,7 @@
                             </subviews>
                         </stackView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IP5-rf-flr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LBTableViewCell" id="IP5-rf-flr" customClass="LBTableViewCell" customModule="Ball_Maze" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IP5-rf-flr" id="nje-SV-zrd">
@@ -346,6 +349,10 @@
                                         <constraint firstItem="6ma-oL-6Vq" firstAttribute="leading" secondItem="nje-SV-zrd" secondAttribute="leadingMargin" id="hlN-Bw-Imy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scoreLabel" destination="25S-tY-fCs" id="PJW-If-Nuj"/>
+                                    <outlet property="userLabel" destination="efX-h9-TO2" id="bAY-d0-scQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -376,6 +383,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xc-2U-O1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-943.20000000000005" y="342.27886056971516"/>
+        </scene>
+        <!--Level Complete View Controller-->
+        <scene sceneID="PA9-FT-iZh">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="yyt-2V-sm3" customClass="LevelCompleteViewController" customModule="Ball_Maze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWE-eo-gAx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K86-iN-MgD">
+                                <rect key="frame" x="87.5" y="246.5" width="200" height="174"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u2O-Xn-ZIl">
+                                        <rect key="frame" x="5" y="24.5" width="190" height="125"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Complete!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keL-uN-82c">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlG-5j-Y7p">
+                                                <rect key="frame" x="0.0" y="28.5" width="190" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-Q3-1Bm">
+                                                <rect key="frame" x="0.0" y="57" width="190" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Next Level"/>
+                                                <connections>
+                                                    <segue destination="9ae-nn-mKq" kind="unwind" unwindAction="unwindToGameWithSender:" id="d2w-wy-dxs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6X-Uk-XA8">
+                                                <rect key="frame" x="0.0" y="95" width="190" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Exit To Menu"/>
+                                                <connections>
+                                                    <segue destination="9ae-nn-mKq" kind="unwind" unwindAction="unwindToGameWithSender:" id="Vsv-9T-UM5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="8uB-YX-uge"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="u2O-Xn-ZIl" firstAttribute="centerX" secondItem="K86-iN-MgD" secondAttribute="centerX" id="ID0-ch-23c"/>
+                                    <constraint firstAttribute="width" constant="200" id="cGc-If-EEW"/>
+                                    <constraint firstItem="u2O-Xn-ZIl" firstAttribute="centerY" secondItem="K86-iN-MgD" secondAttribute="centerY" id="mb6-3p-TIl"/>
+                                    <constraint firstAttribute="height" constant="174" id="pvq-wg-Ckf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79311487030000005" green="0.80290641190000001" blue="0.80290641190000001" alpha="0.50522667249999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.34493287849999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K86-iN-MgD" firstAttribute="centerX" secondItem="pWE-eo-gAx" secondAttribute="centerX" id="Qss-gD-i6e"/>
+                            <constraint firstItem="K86-iN-MgD" firstAttribute="centerY" secondItem="pWE-eo-gAx" secondAttribute="centerY" id="Zo2-rw-iKM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Nh-1d-DDN"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="P6X-Uk-XA8" id="oal-2m-Agm"/>
+                        <outlet property="nextButton" destination="juQ-Q3-1Bm" id="8NB-aW-qYO"/>
+                        <outlet property="scoreText" destination="QlG-5j-Y7p" id="CzK-ED-zxO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6W-jR-SRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9ae-nn-mKq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="1061.9190404797603"/>
         </scene>
     </scenes>
     <resources>

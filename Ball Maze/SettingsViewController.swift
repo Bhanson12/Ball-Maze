@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class SettingsViewController: UIViewController {
    
@@ -18,6 +19,19 @@ class SettingsViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Main Menu", style: .plain, target: self, action: #selector(backButtonPressed))
         // Do any additional setup after loading the view.
+    }
+    
+    private func saveScore() {
+        let score = 1000
+        let user = "Guy"
+        let entry = Score(user: user, score: score)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(entry, toFile: Score.ArchiveURL.path)
+        
+        if isSuccessfulSave {
+            os_log("User/Score saved succesfully", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save user/score...", log: OSLog.default, type: .error)
+        }
     }
     
    
