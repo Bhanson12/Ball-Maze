@@ -128,12 +128,17 @@ class GameViewController: UIViewController {
     @objc func calcScore() {
         if(levelScore >= 0) {
             levelScore = levelScore - 1
-            print(levelScore)
-        }/*
+        }
+        /* for pc level/game completion debugging
         if(levelScore == 998) {
             levelTimer.invalidate()
             scnScene.isPaused = true
-            self.performSegue(withIdentifier: "LevelComplete", sender: nil)
+            if currentLevel.checkGameCompletion() == false {
+                self.performSegue(withIdentifier: "LevelComplete", sender: nil)
+            } else {
+                self.performSegue(withIdentifier: "GameComplete", sender: nil)
+            }
+            
         }*/
     }
     
@@ -171,12 +176,13 @@ class GameViewController: UIViewController {
                 if let destVC = segue.destination as? LevelCompleteViewController {
                     destVC.scoreIn = totalScore
                 }
+            } else if segue.identifier == "GameComplete" {
+                if let destVC = segue.destination as? GameEndViewController {
+                    destVC.scoreIn = totalScore
+                }
             }
-            totalScore = totalScore + levelScore
             levelTimer.invalidate()
-            
         }
-        
     }
     
     @IBAction func unwindToGame(sender: UIStoryboardSegue) {
@@ -212,6 +218,7 @@ class GameViewController: UIViewController {
             switch option {
             case 1:
                 // restart
+                totalScore = 0
                 currentLevel.restartGame()
                 setupGame()
             case 2:
@@ -230,7 +237,7 @@ extension GameViewController: SCNSceneRendererDelegate {
             self.motionForce = SCNVector3(x: x * 0.05, y: 0, z: (y + 0.8) * -0.05)
         }
         
-        // for pc level completion
+        // for pc motion testing
         //self.motionForce = SCNVector3(x: 0, y: 0, z: -0.08)
         
         ballNode.physicsBody?.velocity += motionForce
@@ -251,7 +258,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
             levelTimer.invalidate()
             scnScene.isPaused = true
             
-            if(currentLevel.checkGameCompletion() == false){
+            if currentLevel.checkGameCompletion() == false {
                 OperationQueue.main.addOperation {
                     [weak self] in
                     self?.performSegue(withIdentifier: "LevelComplete", sender: nil)

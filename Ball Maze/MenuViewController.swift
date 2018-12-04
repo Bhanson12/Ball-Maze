@@ -80,7 +80,7 @@ class MenuViewController: UIViewController {
     
     private func loadDefaultSettings() {
         
-        guard let defaultSettings = Settings(user: "default", sfxOn: false, musicOn: false) else {
+        guard let defaultSettings = Settings(user: "default", sfxOn: true, musicOn: true) else {
             fatalError("Unable to instantiate default settings")
         }
         settings = defaultSettings
