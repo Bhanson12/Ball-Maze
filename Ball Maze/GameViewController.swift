@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     
     var cameraNode: SCNNode!
     var ballNode: SCNNode!
+    var selfieStickNode: SCNNode!
     var levelNode: SCNNode!
     var endLevelNode: SCNNode!
     var currentLevel = level()
@@ -52,13 +53,12 @@ class GameViewController: UIViewController {
         
         scnView = self.view as! SCNView
         scnView.delegate = self
-        scnView.allowsCameraControl = true
+        //scnView.allowsCameraControl = true
     }
     
     func setupScene() {
         scnScene = SCNScene(named: "BallMaze.scnassets/MainScene.scn")
         scnView.scene = scnScene
-        scnView.allowsCameraControl = false
         
         scnScene.physicsWorld.contactDelegate = self
     }
@@ -89,6 +89,8 @@ class GameViewController: UIViewController {
     func setupNodes() {
         ballNode = scnScene.rootNode.childNode(withName: "ball", recursively: true)!
         ballNode.physicsBody?.contactTestBitMask = categoryEndLevel
+        
+        selfieStickNode = scnScene.rootNode.childNode(withName: "selfieStick", recursively: true)!
         
     }
 
@@ -225,6 +227,20 @@ class GameViewController: UIViewController {
 
 extension GameViewController: SCNSceneRendererDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        let ball = ballNode.presentation
+        let ballPosition = ball.position
+        
+        let targetPosition = SCNVector3(x: ballPosition.x, y: ballPosition.y + 2, z: ballPosition.z + 2)
+        var cameraPosition = selfieStickNode.position
+        
+        let camDamping: Float = 0.3
+        
+        let xComponent = cameraPosition.x * (1 - camDamping) + targetPosition.x * camDamping
+        let yComponent = cameraPosition.y * (1 - camDamping) + targetPosition.y * camDamping
+        let zComponent = cameraPosition.z * (1 - camDamping) + targetPosition.z * camDamping
+        
+        cameraPosition = SCNVector3(x: xComponent, y: yComponent, z: zComponent)
+        selfieStickNode.position = cameraPosition
         
         motion.getAccelerometerData {(x, y, z) in
             self.motionForce = SCNVector3(x: x * 0.05, y: 0, z: (y + 0.8) * -0.05)
