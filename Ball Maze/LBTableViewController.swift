@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import os.log
 
 class LBTableViewController: UITableViewController {
     //MARK: Properties
     
     var scores = [Score]()
+    var sortedScores = [Score]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,19 @@ class LBTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let removeDups = Array(Set(scores))
+        sortedScores = removeDups.sorted(by: { $0.score > $1.score })
+        
+        while sortedScores.count > 10 {
+            sortedScores.removeLast()
+        }
+        
+        saveScores()
+    }
+    
     @objc func backButtonPressed() {
         
         SFXController.sharedSFX.playBackSound()
@@ -41,7 +56,7 @@ class LBTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scores.count
+        return sortedScores.count
     }
 
     
@@ -53,7 +68,6 @@ class LBTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of ScoreTableViewCell.")
         }
         
-        let sortedScores = scores.sorted(by: { $0.score > $1.score })
         let score = sortedScores[indexPath.row]
         
         cell.userLabel.text = score.user
@@ -131,5 +145,14 @@ class LBTableViewController: UITableViewController {
     
     private func loadScores() -> [Score]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Score.ArchiveURL.path) as? [Score]
+    }
+    
+    private func saveScores() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(sortedScores, toFile: Score.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Score successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save score...", log: OSLog.default, type: .error)
+        }
     }
 }
