@@ -26,6 +26,10 @@ class level {
         self.num = self.num + 1
     }
     
+    func restartGame() {
+        self.num = 1
+    }
+    
     func checkGameCompletion() -> Bool {
         if (NUMOFLEVELS <= self.num) {
             return true

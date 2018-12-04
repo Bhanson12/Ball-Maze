@@ -58,6 +58,7 @@ class GameViewController: UIViewController {
     func setupScene() {
         scnScene = SCNScene(named: "BallMaze.scnassets/MainScene.scn")
         scnView.scene = scnScene
+        scnView.allowsCameraControl = false
         
         scnScene.physicsWorld.contactDelegate = self
     }
@@ -205,6 +206,19 @@ class GameViewController: UIViewController {
             default:
                 self.navigationController?.popToRootViewController(animated: false)
             }
+        } else if let sourceViewController = sender.source as? GameEndViewController {
+            let option = sourceViewController.option
+            
+            switch option {
+            case 1:
+                // restart
+                currentLevel.restartGame()
+                setupGame()
+            case 2:
+                self.navigationController?.popToRootViewController(animated: false)
+            default:
+                self.navigationController?.popToRootViewController(animated: false)
+            }
         }
     }
 }
@@ -217,7 +231,7 @@ extension GameViewController: SCNSceneRendererDelegate {
         }
         
         // for pc level completion
-        self.motionForce = SCNVector3(x: 0, y: 0, z: -0.08)
+        //self.motionForce = SCNVector3(x: 0, y: 0, z: -0.08)
         
         ballNode.physicsBody?.velocity += motionForce
     }
@@ -236,9 +250,17 @@ extension GameViewController: SCNPhysicsContactDelegate {
         if contactNode.physicsBody?.categoryBitMask == categoryEndLevel {
             levelTimer.invalidate()
             scnScene.isPaused = true
-            OperationQueue.main.addOperation {
-                [weak self] in
-                self?.performSegue(withIdentifier: "LevelComplete", sender: nil)
+            
+            if(currentLevel.checkGameCompletion() == false){
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "LevelComplete", sender: nil)
+                }
+            } else {
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "GameComplete", sender: nil)
+                }
             }
             
         }

@@ -300,6 +300,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="yyt-2V-sm3" kind="presentation" identifier="LevelComplete" animates="NO" id="ZLO-ZA-dSS"/>
+                        <segue destination="nfr-K4-oNu" kind="presentation" identifier="GameComplete" animates="NO" id="fTc-hq-K2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -478,6 +479,78 @@
                 <exit id="9ae-nn-mKq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="900" y="1061.9190404797603"/>
+        </scene>
+        <!--Game End View Controller-->
+        <scene sceneID="Syt-S3-we9">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="nfr-K4-oNu" customClass="GameEndViewController" customModule="Ball_Maze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J1c-8E-YXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvR-6J-fdU">
+                                <rect key="frame" x="87" y="278" width="200" height="111"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Snu-5Y-b72">
+                                        <rect key="frame" x="5" y="8" width="190" height="96.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-BC-uVy">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yo-Zr-50c">
+                                                <rect key="frame" x="0.0" y="28.5" width="190" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Restart"/>
+                                                <connections>
+                                                    <segue destination="yPR-Q7-Rf4" kind="unwind" unwindAction="unwindToGameWithSender:" id="uuZ-jW-KSW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6T-07-kFN">
+                                                <rect key="frame" x="0.0" y="66.5" width="190" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Exit To Menu"/>
+                                                <connections>
+                                                    <segue destination="yPR-Q7-Rf4" kind="unwind" unwindAction="unwindToGameWithSender:" id="qcW-Cv-Qct"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="2np-AM-GWm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6H9-ib-emT"/>
+                                    <constraint firstItem="Snu-5Y-b72" firstAttribute="centerY" secondItem="zvR-6J-fdU" secondAttribute="centerY" id="Fsv-2b-ABa"/>
+                                    <constraint firstItem="Snu-5Y-b72" firstAttribute="centerX" secondItem="zvR-6J-fdU" secondAttribute="centerX" id="NvP-JH-RPq"/>
+                                    <constraint firstAttribute="height" constant="250" id="vyL-U6-mLd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79311487030000005" green="0.80290641190000001" blue="0.80290641190000001" alpha="0.50522667249999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.34493287849999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zvR-6J-fdU" firstAttribute="centerY" secondItem="J1c-8E-YXt" secondAttribute="centerY" id="IFK-Ph-8Li"/>
+                            <constraint firstItem="zvR-6J-fdU" firstAttribute="centerX" secondItem="J1c-8E-YXt" secondAttribute="centerX" id="wy2-mP-3hJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HxM-hc-J0J"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="I6T-07-kFN" id="9Up-A7-QMy"/>
+                        <outlet property="restartButton" destination="3Yo-Zr-50c" id="mtK-SA-1SY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRb-5p-OfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yPR-Q7-Rf4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1856.8" y="-376.46176911544228"/>
         </scene>
     </scenes>
     <resources>
