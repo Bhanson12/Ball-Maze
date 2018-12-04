@@ -15,7 +15,6 @@ class LevelCompleteViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
  
-    
     var option = 0
     var scoreIn: Int!
     var scores = [Score]()

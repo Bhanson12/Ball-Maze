@@ -30,6 +30,10 @@ class level {
         self.num = 1
     }
     
+    func getLevelNum() -> Int {
+        return self.num
+    }
+    
     func checkGameCompletion() -> Bool {
         if (NUMOFLEVELS <= self.num) {
             return true

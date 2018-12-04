@@ -52,6 +52,14 @@ class MenuViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if let savedSettings = loadSettings() {
+            settings = savedSettings
+            os_log("Loading saved settings", log: OSLog.default, type: .debug)
+        }  else {
+            loadDefaultSettings()
+            os_log("Loading default settings", log: OSLog.default, type: .debug)
+        }
+        
         userText.text = "Current User: " + (settings?.user)!
     }
     

@@ -50,6 +50,7 @@ class GameViewController: UIViewController {
     func setupView() {
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationItem.title = "Level " + String(currentLevel.getLevelNum())
         
         scnView = self.view as! SCNView
         scnView.delegate = self
